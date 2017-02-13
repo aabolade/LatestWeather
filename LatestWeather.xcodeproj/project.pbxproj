@@ -19,8 +19,8 @@
 		0828E4521E513CC700BD44F6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4501E513B8900BD44F6 /* APIService.swift */; };
 		0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4221E511F2900BD44F6 /* ViewController.swift */; };
 		085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81111E514276005C947D /* CurrentWeatherTests.swift */; };
-		085D81141E5142E6005C947D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* Weather.swift */; };
-		085D81151E5142E9005C947D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* Weather.swift */; };
+		085D81141E5142E6005C947D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* CurrentWeather.swift */; };
+		085D81151E5142E9005C947D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* CurrentWeather.swift */; };
 		085D81171E514B52005C947D /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085D81161E514B52005C947D /* ApiKeys.plist */; };
 		085D811B1E514EE5005C947D /* ClientKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D811A1E514EE5005C947D /* ClientKeys.swift */; };
 		085D811C1E514F3A005C947D /* ClientKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D811A1E514EE5005C947D /* ClientKeys.swift */; };
@@ -64,7 +64,7 @@
 		0828E44E1E512CC800BD44F6 /* ViewControllerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTest.swift; sourceTree = "<group>"; };
 		0828E4501E513B8900BD44F6 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		085D81111E514276005C947D /* CurrentWeatherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTests.swift; sourceTree = "<group>"; };
-		085D81131E5142E6005C947D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		085D81131E5142E6005C947D /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		085D81161E514B52005C947D /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		085D811A1E514EE5005C947D /* ClientKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientKeys.swift; sourceTree = "<group>"; };
 		085D811F1E51C7BD005C947D /* APIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 				0828E4291E511F2900BD44F6 /* LaunchScreen.storyboard */,
 				0828E42C1E511F2900BD44F6 /* Info.plist */,
 				0828E4501E513B8900BD44F6 /* APIService.swift */,
-				085D81131E5142E6005C947D /* Weather.swift */,
+				085D81131E5142E6005C947D /* CurrentWeather.swift */,
 				085D81161E514B52005C947D /* ApiKeys.plist */,
 				085D811A1E514EE5005C947D /* ClientKeys.swift */,
 			);
@@ -473,7 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				085D811B1E514EE5005C947D /* ClientKeys.swift in Sources */,
-				085D81141E5142E6005C947D /* Weather.swift in Sources */,
+				085D81141E5142E6005C947D /* CurrentWeather.swift in Sources */,
 				0828E4231E511F2900BD44F6 /* ViewController.swift in Sources */,
 				0828E4511E513B8900BD44F6 /* APIService.swift in Sources */,
 				0828E4211E511F2900BD44F6 /* AppDelegate.swift in Sources */,
@@ -488,7 +488,7 @@
 				0828E4521E513CC700BD44F6 /* APIService.swift in Sources */,
 				0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */,
 				085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */,
-				085D81151E5142E9005C947D /* Weather.swift in Sources */,
+				085D81151E5142E9005C947D /* CurrentWeather.swift in Sources */,
 				0828E4361E511F2900BD44F6 /* LatestWeatherTests.swift in Sources */,
 				085D81201E51C7BD005C947D /* APIServiceTests.swift in Sources */,
 				085D811C1E514F3A005C947D /* ClientKeys.swift in Sources */,

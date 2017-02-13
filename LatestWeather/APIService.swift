@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import Alamofire
 
 class APIService {
     
-    func getWeatherJSON() {
+    typealias JSONDictionaryCompletion = (Forecast?) -> Void
+    
+    func getWeatherJSON(_ completion: @escaping JSONDictionaryCompletion) {
+        
+        
         
     }
     

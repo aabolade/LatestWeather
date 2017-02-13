@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Weather {
+struct CurrentWeather {
     
     let temperature: String?
     let humidity: String?
