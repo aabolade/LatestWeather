@@ -34,6 +34,16 @@ class ViewControllerUnitTest: XCTestCase {
         XCTAssertTrue((vc.apiService as! FakeAPIService).getWeatherJSONWasCalled)
     }
     
+    func testGetWeatherMethodChangesDisplayText() {
+        let vc = ViewController()
+        vc.getCurrentWeather()
+        XCTAssertNotNil(vc.temperatureLabel)
+        XCTAssertNotNil(vc.humidityLabel)
+        XCTAssertNotNil(vc.summaryLabel)
+        XCTAssertNotNil(vc.precipitationLabel)
+    }
+
+    
     override func tearDown() {
         super.tearDown()
     }

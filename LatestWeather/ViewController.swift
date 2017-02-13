@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     
     var apiService = APIService()
     
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var precipitationLabel: UILabel!
+    
+    @IBOutlet weak var humidityLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

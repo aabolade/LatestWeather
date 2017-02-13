@@ -14,17 +14,18 @@ class APIServiceTests: XCTestCase {
         super.setUp()
     }
     
-    func testGetWeatherJSON() {
-        let expect = expectation(description: "API service")
-        
-        let apiService = APIService()
-        apiService.getWeatherJSON() { (currentWeather) in
-            XCTAssertNotNil(currentWeather, "Expected non-nil object")
-            expect.fulfill()
-        }
-        
-        waitForExpectations(timeout: 5.0, handler: nil)
-    }
+//    func testGetWeatherJSON() {
+//        let expect = expectation(description: "API service")
+//        
+//        let apiService = APIService()
+//        apiService.getWeatherJSON() { (currentWeather) in
+//            XCTAssertNotNil(currentWeather, "Expected non-nil object")
+//            
+//            expect.fulfill()
+//        }
+//        
+//        waitForExpectations(timeout: 5.0, handler: nil)
+//    }
     
     override func tearDown() {
         super.tearDown()
