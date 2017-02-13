@@ -18,6 +18,9 @@
 		0828E4511E513B8900BD44F6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4501E513B8900BD44F6 /* APIService.swift */; };
 		0828E4521E513CC700BD44F6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4501E513B8900BD44F6 /* APIService.swift */; };
 		0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4221E511F2900BD44F6 /* ViewController.swift */; };
+		085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81111E514276005C947D /* CurrentWeatherTests.swift */; };
+		085D81141E5142E6005C947D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* Weather.swift */; };
+		085D81151E5142E9005C947D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* Weather.swift */; };
 		13934D409516875D3B438C26 /* Pods_LatestWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB028FCA82D683E7B99B4858 /* Pods_LatestWeather.framework */; };
 		23EC835262988B556C7FC24E /* Pods_LatestWeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196B69918BD00B6EF3EC9844 /* Pods_LatestWeatherUITests.framework */; };
 		E67DC077DEC74CCE3097D2AE /* Pods_LatestWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBFC1652566E6C35A444FC8 /* Pods_LatestWeatherTests.framework */; };
@@ -56,6 +59,8 @@
 		0828E4421E511F2900BD44F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0828E44E1E512CC800BD44F6 /* ViewControllerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTest.swift; sourceTree = "<group>"; };
 		0828E4501E513B8900BD44F6 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		085D81111E514276005C947D /* CurrentWeatherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTests.swift; sourceTree = "<group>"; };
+		085D81131E5142E6005C947D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0B6C0EFAB14A3B742EDC01B4 /* Pods-LatestWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatestWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LatestWeather/Pods-LatestWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		196B69918BD00B6EF3EC9844 /* Pods_LatestWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LatestWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		241FCCB60E2B204179E571A3 /* Pods-LatestWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatestWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-LatestWeather/Pods-LatestWeather.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 				0828E4291E511F2900BD44F6 /* LaunchScreen.storyboard */,
 				0828E42C1E511F2900BD44F6 /* Info.plist */,
 				0828E4501E513B8900BD44F6 /* APIService.swift */,
+				085D81131E5142E6005C947D /* Weather.swift */,
 			);
 			path = LatestWeather;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				0828E4351E511F2900BD44F6 /* LatestWeatherTests.swift */,
 				0828E4371E511F2900BD44F6 /* Info.plist */,
 				0828E44E1E512CC800BD44F6 /* ViewControllerUnitTest.swift */,
+				085D81111E514276005C947D /* CurrentWeatherTests.swift */,
 			);
 			path = LatestWeatherTests;
 			sourceTree = "<group>";
@@ -454,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085D81141E5142E6005C947D /* Weather.swift in Sources */,
 				0828E4231E511F2900BD44F6 /* ViewController.swift in Sources */,
 				0828E4511E513B8900BD44F6 /* APIService.swift in Sources */,
 				0828E4211E511F2900BD44F6 /* AppDelegate.swift in Sources */,
@@ -467,6 +475,8 @@
 				0828E44F1E512CC800BD44F6 /* ViewControllerUnitTest.swift in Sources */,
 				0828E4521E513CC700BD44F6 /* APIService.swift in Sources */,
 				0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */,
+				085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */,
+				085D81151E5142E9005C947D /* Weather.swift in Sources */,
 				0828E4361E511F2900BD44F6 /* LatestWeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
