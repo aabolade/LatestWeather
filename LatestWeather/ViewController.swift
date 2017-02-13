@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCurrentWeather()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +22,13 @@ class ViewController: UIViewController {
     }
     
     func getCurrentWeather() {
-        apiService.getWeatherJSON()
+        apiService.getWeatherJSON() { (forecast) in
+            
+            if let unwrappedForecast = forecast,
+                let unwrappedCurrentWeather = unwrappedForecast.currentWeather {
+                print(unwrappedCurrentWeather.humidity)
+            }
+        }
     }
 
 }

@@ -17,12 +17,12 @@ class CurrentWeatherTests: XCTestCase {
     
     func testWeatherAssignsPropertyFromDictionary() {
         let weatherDictionary = ["summary": "partly cloudy", "temperature": "60", "humidity": "0.68", "precipProbability":"0.2"]
-        let currentWeather = Weather(weatherDictionary: weatherDictionary as [String : AnyObject])
+        let currentWeather = CurrentWeather(weatherDictionary: weatherDictionary as [String : AnyObject])
         
-        XCTAssertEqual(currentWeather.temperature, "60")
-        XCTAssertEqual(currentWeather.precipitation, "0.2")
+        XCTAssertEqual(currentWeather.temperature, 60)
+        XCTAssertEqual(currentWeather.precipitation, 20)
         XCTAssertEqual(currentWeather.summary, "partly cloudy")
-        XCTAssertEqual(currentWeather.humidity, "0.68")
+        XCTAssertEqual(currentWeather.humidity, 68)
     }
     
     override func tearDown() {

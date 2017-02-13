@@ -18,12 +18,11 @@ class APIServiceTests: XCTestCase {
         let expect = expectation(description: "API service")
         
         let apiService = APIService()
-        apiService.getWeatherJSON() { (currentWeather) in
-            XCTAssertNotNil(currentWeather, "Expected non-nil object")
+        apiService.getWeatherJSON() { (forecast) in
+            XCTAssertNotNil(forecast, "Expected non-nil object")
             expect.fulfill()
         }
-        
-        waitForExpectations(timeout: 5.0, handler: nil)
+        waitForExpectations(timeout: 10.0, handler: nil)
     }
     
     override func tearDown() {

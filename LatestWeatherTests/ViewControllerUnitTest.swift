@@ -22,7 +22,7 @@ class ViewControllerUnitTest: XCTestCase {
         class FakeAPIService: APIService {
             var getWeatherJSONWasCalled = false
         
-             override func getWeatherJSON() {
+            override func getWeatherJSON(_ completion: @escaping JSONDictionaryCompletion) {
                 getWeatherJSONWasCalled = true
             }
         }
