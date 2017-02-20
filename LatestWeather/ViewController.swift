@@ -50,6 +50,11 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func getWeather() {
+        getCurrentWeather()
+    }
+    
 
 }
 
