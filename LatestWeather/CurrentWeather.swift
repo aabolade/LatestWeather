@@ -17,17 +17,13 @@ enum dictionaryKeys: String {
 
 struct CurrentWeather {
     
-    let temperature: Int?
+    var temperature: Int?
     let humidity: Int?
     let summary: String?
     let precipitation: Int?
     
     init(weatherDictionary: [String: AnyObject]) {
-        if let temperatureInt = weatherDictionary[dictionaryKeys.temperature.rawValue] as? Int {
-            temperature = temperatureInt
-        } else {
-            temperature = nil
-        }
+       
         if let humidityDouble = weatherDictionary[dictionaryKeys.humidity.rawValue] as? Double {
             humidity = Int(humidityDouble * 100)
         } else {
@@ -39,5 +35,18 @@ struct CurrentWeather {
             precipitation = nil
         }
         summary = weatherDictionary[dictionaryKeys.summary.rawValue] as? String
+        
+        if let temperatureDouble = weatherDictionary[dictionaryKeys.temperature.rawValue] as? Double {
+            temperature = convertToDegreesCelsius(temperature: temperatureDouble)
+        } else {
+            temperature = nil
+        }
     }
+    
+    func convertToDegreesCelsius(temperature: Double) -> Int {
+        let temperatureDouble = (temperature - 32)/1.8
+        return Int(temperatureDouble.rounded())
+    }
+    
+    
 }
