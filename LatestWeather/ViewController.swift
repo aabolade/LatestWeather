@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var apiService = APIService()
+    var locationManager: CLLocationManager!
     
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -19,6 +21,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         getCurrentWeather()
     }
 
@@ -27,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     func getCurrentWeather() {
-        apiService.getWeatherJSON() { (forecast) in
+        apiService.getWeatherJSON(37.8267,longitude: -122.4233) { (forecast) in
             
             if let forecast = forecast,
                 let unwrappedCurrentWeather = forecast.currentWeather {
