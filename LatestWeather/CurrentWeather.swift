@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum dictionaryKeys: String {
+    case temperature = "temperature"
+    case humidity = "humidity"
+    case precipitation = "precipProbability"
+    case summary = "summary"
+}
+
 struct CurrentWeather {
     
     let temperature: Int?
@@ -16,21 +23,21 @@ struct CurrentWeather {
     let precipitation: Int?
     
     init(weatherDictionary: [String: AnyObject]) {
-        if let temperatureInt = weatherDictionary["temperature"] as? Int {
+        if let temperatureInt = weatherDictionary[dictionaryKeys.temperature.rawValue] as? Int {
             temperature = temperatureInt
         } else {
             temperature = nil
         }
-        if let humidityDouble = weatherDictionary["humidity"] as? Double {
+        if let humidityDouble = weatherDictionary[dictionaryKeys.humidity.rawValue] as? Double {
             humidity = Int(humidityDouble * 100)
         } else {
             humidity = nil
         }
-        if let precipitationDouble = weatherDictionary["precipProbability"] as? Double {
+        if let precipitationDouble = weatherDictionary[dictionaryKeys.precipitation.rawValue] as? Double {
             precipitation = Int(precipitationDouble * 100)
         } else {
             precipitation = nil
         }
-        summary = weatherDictionary["summary"] as? String
+        summary = weatherDictionary[dictionaryKeys.summary.rawValue] as? String
     }
 }
