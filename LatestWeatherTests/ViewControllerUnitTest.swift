@@ -11,15 +11,22 @@ import XCTest
 
 class ViewControllerUnitTest: XCTestCase {
     
-    var viewController: UIViewController!
+    var viewController: ViewController!
     
     override func setUp() {
         super.setUp()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        UIApplication.shared.keyWindow!.rootViewController = viewController
+        
+        let _ = viewController.view
     }
     
     func testHasMethodThatCallsAPIService() {
     
         class FakeAPIService: APIService {
+            
             var getWeatherJSONWasCalled = false
         
             override func getWeatherJSON(_ completion: @escaping JSONDictionaryCompletion) {
@@ -30,8 +37,15 @@ class ViewControllerUnitTest: XCTestCase {
         let vc = ViewController()
         vc.apiService = FakeAPIService()
         vc.getCurrentWeather()
-        
         XCTAssertTrue((vc.apiService as! FakeAPIService).getWeatherJSONWasCalled)
+    }
+    
+    func testUILabels() {
+        viewController.getCurrentWeather()
+        XCTAssertNotNil(viewController.temperatureLabel.text)
+        XCTAssertNotNil(viewController.precipitationLabel.text)
+        XCTAssertNotNil(viewController.humidityLabel.text)
+        XCTAssertNotNil(viewController.summaryLabel.text)
     }
     
     override func tearDown() {

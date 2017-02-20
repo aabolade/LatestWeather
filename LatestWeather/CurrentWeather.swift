@@ -16,19 +16,17 @@ struct CurrentWeather {
     let precipitation: Int?
     
     init(weatherDictionary: [String: AnyObject]) {
-        if let temperatureString = weatherDictionary["temperature"] as? String {
-            temperature = Int(temperatureString)
+        if let temperatureInt = weatherDictionary["temperature"] as? Int {
+            temperature = temperatureInt
         } else {
             temperature = nil
         }
-        if let humidityString = weatherDictionary["humidity"] as? String,
-            let humidityDouble = Double(humidityString) {
+        if let humidityDouble = weatherDictionary["humidity"] as? Double {
             humidity = Int(humidityDouble * 100)
         } else {
             humidity = nil
         }
-        if let precipitationString = weatherDictionary["precipProbability"] as? String,
-            let precipitationDouble = Double(precipitationString) {
+        if let precipitationDouble = weatherDictionary["precipProbability"] as? Double {
             precipitation = Int(precipitationDouble * 100)
         } else {
             precipitation = nil

@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     var apiService = APIService()
     
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var precipitationLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrentWeather()
@@ -24,9 +29,24 @@ class ViewController: UIViewController {
     func getCurrentWeather() {
         apiService.getWeatherJSON() { (forecast) in
             
-            if let unwrappedForecast = forecast,
-                let unwrappedCurrentWeather = unwrappedForecast.currentWeather {
-                print(unwrappedCurrentWeather.humidity)
+            if let forecast = forecast,
+                let unwrappedCurrentWeather = forecast.currentWeather {
+                
+                if let summary = unwrappedCurrentWeather.summary {
+                    self.summaryLabel.text = summary
+                }
+                
+                if let temperature = unwrappedCurrentWeather.temperature {
+                 self.temperatureLabel.text = "\(temperature)°C"
+                }
+                
+                if let humidity = unwrappedCurrentWeather.humidity {
+                    self.humidityLabel.text = "\(humidity)%"
+                }
+                
+                if let precipitation = unwrappedCurrentWeather.precipitation {
+                    self.precipitationLabel.text = "\(precipitation)%"
+                }
             }
         }
     }

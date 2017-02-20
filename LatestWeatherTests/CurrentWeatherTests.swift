@@ -16,7 +16,7 @@ class CurrentWeatherTests: XCTestCase {
     }
     
     func testWeatherAssignsPropertyFromDictionary() {
-        let weatherDictionary = ["summary": "partly cloudy", "temperature": "60", "humidity": "0.68", "precipProbability":"0.2"]
+        let weatherDictionary = ["summary": "partly cloudy", "temperature": 60, "humidity": 0.68, "precipProbability": 0.2] as [String : Any]
         let currentWeather = CurrentWeather(weatherDictionary: weatherDictionary as [String : AnyObject])
         
         XCTAssertEqual(currentWeather.temperature, 60)
