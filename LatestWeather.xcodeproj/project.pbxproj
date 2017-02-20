@@ -17,7 +17,6 @@
 		0828E44F1E512CC800BD44F6 /* ViewControllerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E44E1E512CC800BD44F6 /* ViewControllerUnitTest.swift */; };
 		0828E4511E513B8900BD44F6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4501E513B8900BD44F6 /* APIService.swift */; };
 		0828E4521E513CC700BD44F6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4501E513B8900BD44F6 /* APIService.swift */; };
-		0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828E4221E511F2900BD44F6 /* ViewController.swift */; };
 		085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81111E514276005C947D /* CurrentWeatherTests.swift */; };
 		085D81141E5142E6005C947D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* CurrentWeather.swift */; };
 		085D81151E5142E9005C947D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085D81131E5142E6005C947D /* CurrentWeather.swift */; };
@@ -495,7 +494,6 @@
 				085D81251E51E5A1005C947D /* ForecastTests.swift in Sources */,
 				0828E44F1E512CC800BD44F6 /* ViewControllerUnitTest.swift in Sources */,
 				0828E4521E513CC700BD44F6 /* APIService.swift in Sources */,
-				0828E4531E513E0200BD44F6 /* ViewController.swift in Sources */,
 				085D81121E514276005C947D /* CurrentWeatherTests.swift in Sources */,
 				085D81231E51CCEC005C947D /* Forecast.swift in Sources */,
 				085D81151E5142E9005C947D /* CurrentWeather.swift in Sources */,
