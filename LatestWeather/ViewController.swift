@@ -25,15 +25,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        getCurrentWeather()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func getCurrentWeather() {
-        apiService.getWeatherJSON(37.8267,longitude: -122.4233) { (forecast) in
+    func getCurrentWeather(location: CLLocationCoordinate2D) {
+        apiService.getWeatherJSON(location.latitude,longitude: location.longitude) { (forecast) in
             
             if let forecast = forecast,
                 let unwrappedCurrentWeather = forecast.currentWeather {
@@ -57,8 +58,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation: CLLocation = locations[0]
+        manager.stopUpdatingLocation()
+        getCurrentWeather(location: userLocation.coordinate)
+    }
+    
     @IBAction func getWeather() {
-        getCurrentWeather()
     }
     
 
