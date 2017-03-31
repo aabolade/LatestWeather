@@ -21,8 +21,9 @@ struct CurrentWeather {
     let humidity: Int?
     let summary: String?
     let precipitation: Int?
+    let location: String?
     
-    init(weatherDictionary: [String: AnyObject]) {
+    init(weatherDictionary: [String: AnyObject], locationDictionary: [[String:AnyObject]]) {
        
         if let humidityDouble = weatherDictionary[dictionaryKeys.humidity.rawValue] as? Double {
             humidity = Int(humidityDouble * 100)
@@ -35,6 +36,8 @@ struct CurrentWeather {
             precipitation = nil
         }
         summary = weatherDictionary[dictionaryKeys.summary.rawValue] as? String
+        
+       location = locationDictionary[0]["formatted_address"] as? String
         
         if let temperatureDouble = weatherDictionary[dictionaryKeys.temperature.rawValue] as? Double {
             temperature = convertToDegreesCelsius(temperature: temperatureDouble)

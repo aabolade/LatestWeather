@@ -12,11 +12,9 @@ struct Forecast {
     
     var currentWeather: CurrentWeather?
     
-    init(forecastDictionary: [String: AnyObject]?) {
-        if let unwrappedForecastDictionary = forecastDictionary?["currently"] as? [String:AnyObject] {
-            currentWeather = CurrentWeather(weatherDictionary: unwrappedForecastDictionary)
-            print(currentWeather)
+    init(forecastDictionary: [String: AnyObject]?, locationDictionary: [String: AnyObject]?) {
+        if let unwrappedForecastDictionary = forecastDictionary?["currently"] as? [String : AnyObject], let unwrappedLocationDictionary = locationDictionary?["results"] as? [[String : AnyObject]] {
+            currentWeather = CurrentWeather(weatherDictionary: unwrappedForecastDictionary, locationDictionary: unwrappedLocationDictionary)
         }
     }
-    
 }

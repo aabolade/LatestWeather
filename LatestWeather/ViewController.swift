@@ -19,6 +19,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +43,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 if let summary = unwrappedCurrentWeather.summary {
                     self.summaryLabel.text = summary
+                }
+                
+                if let location = unwrappedCurrentWeather.location {
+                    self.locationLabel.text = location
                 }
                 
                 if let temperature = unwrappedCurrentWeather.temperature {

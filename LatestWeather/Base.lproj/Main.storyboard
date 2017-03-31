@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="humidityLabel" destination="Ymu-T1-GKc" id="0nA-KU-O1E"/>
+                        <outlet property="locationLabel" destination="buh-HW-Ed5" id="C0h-kQ-DDt"/>
                         <outlet property="precipitationLabel" destination="o3A-iW-Qcx" id="hu6-FQ-e3y"/>
                         <outlet property="searchDisplayController" destination="W0g-X6-Ihj" id="NBx-Is-A0z"/>
                         <outlet property="summaryLabel" destination="qyo-WV-UBO" id="bdv-a5-WC2"/>

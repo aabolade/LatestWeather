@@ -9,24 +9,32 @@
 import Foundation
 import Alamofire
 
-
 class APIService {
-
+    
     typealias JSONDictionaryCompletion = (Forecast?) -> Void
     
     func getWeatherJSON(_ latitude: Double, longitude: Double, completion: @escaping JSONDictionaryCompletion) {
         
         let clientKeys = ClientKeys()
-        let apiKey = clientKeys.valueForAPIKey(named: "API_CLIENT_ID")
+        let weatherApiKey = clientKeys.valueForAPIKey(named: "API_CLIENT_ID")
+        let locationApiKey = clientKeys.valueForAPIKey(named: "GOOGLE_PLACES")
         
-        Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(latitude),\(longitude)").responseJSON { response in
+        Alamofire.request("https://api.darksky.net/forecast/\(weatherApiKey)/\(latitude),\(longitude)").responseJSON { response in
             
-            guard let JSON = response.result.value as? [String: AnyObject] else {
-                print("There is no data")
+            guard let weatherJSON = response.result.value as? [String: AnyObject] else {
+                print("There is no weather data")
                 return
             }
-            let forecast = Forecast(forecastDictionary: JSON)
-            completion(forecast)
+            
+            Alamofire.request("https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&result_type=locality&key=\(locationApiKey)").responseJSON { response in
+                guard let locationJSON = response.result.value as? [String:AnyObject] else {
+                    print("There is no location data")
+                    return
+                }
+                let forecast = Forecast(forecastDictionary: weatherJSON, locationDictionary: locationJSON)
+                completion(forecast)
+            }
         }
     }
+
 }
